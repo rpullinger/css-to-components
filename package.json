@@ -1,0 +1,22 @@
+{
+  "name": "css-to-components",
+  "version": "0.0.1",
+  "description": "CSS to [p|r]eact components",
+  "main": "build/bundle.js",
+  "repository": {},
+  "author": "r_pullinger@hotmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "rollup": "^0.45.2"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  }
+}
