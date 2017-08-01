@@ -1,23 +1,28 @@
 {
   "name": "css-to-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CSS to preact/react components",
   "main": "lib/bundle.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/rpullinger/css-to-components"
+    "type": "git",
+    "url": "https://github.com/rpullinger/css-to-components"
   },
   "author": "r_pullinger@hotmail.com",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "preact": "^8.2.1"
+  },
   "devDependencies": {
-    "rollup": "^0.45.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
+    "babel-preset-preact": "^1.1.0",
+    "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-node-resolve": "^3.0.0"
   }
