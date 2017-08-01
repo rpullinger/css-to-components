@@ -1,6 +1,6 @@
 {
   "name": "css-to-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "CSS to preact/react components",
   "main": "lib/bundle.js",
   "repository": {
@@ -12,11 +12,7 @@
   "scripts": {
     "build": "rollup -c"
   },
-  "dependencies": {
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "preact": "^8.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
