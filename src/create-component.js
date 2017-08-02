@@ -4,7 +4,7 @@ const trimFalse = classname => classname.replace(/-false$/, '');
 const trimTrue = classname => classname.replace(/-true$/, '');
 const toClassName = base => ([key, value]) => `${base}---${key}-${value}`;
 
-const createComponent = h => ({ base = '', styles = [] }) => ({
+const createComponent = (h, { base = '', styles = [] }) => ({
   className,
   tag = 'div',
   ...props

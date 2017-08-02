@@ -6,8 +6,8 @@ export default function(source) {
       replacement,
       (match, p1, p2) => `
         import stylesssss from '${p2}.css';
-        import cssToComponents from 'css-to-components';
-        const ${p1} = cssToComponents(() => {})(stylesssss);
+        import cssToComponents from 'css-to-components/lib/preact';
+        const ${p1} = cssToComponents(stylesssss);
       `
     );
   }
