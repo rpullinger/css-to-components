@@ -9,8 +9,27 @@ const createComponent = (h, { base = '', styles = [] }) => ({
   tag = 'div',
   ...props
 }) => {
+  const componentProps = toPairs(props).map(([key, value]) => {
+    const isCSSProp = compose(
+      key => styles[key],
+      trimFalse,
+      trimTrue,
+      toClassName(base)
+    )([key, value]);
+
+    if (isCSSProp) {
+      return null;
+    }
+    return key;
+  });
+
+  const propsToAdd = {};
+  componentProps.forEach(prop => {
+    propsToAdd[prop] = props[prop];
+  });
+
   const component = h(tag, {
-    ...props,
+    ...propsToAdd,
     className: compose(
       join(' '),
       prepend(className),

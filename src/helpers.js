@@ -25,3 +25,5 @@ export const groupBy = func => array =>
     all[baseKey] = [...base, key];
     return all;
   }, [])(array);
+export const getHash = () =>
+  Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
